@@ -1,7 +1,16 @@
 import React from 'react'
+import { Layout } from '../../components/layout/Layout'
+import { NextPageWithLayout } from '../page'
 
-export default function tournaments() {
+
+export const Tournaments: NextPageWithLayout = () => {
   return (
     <div>tournaments</div>
   )
 }
+
+Tournaments.getLayout = (page) => {
+  return <Layout>{page}</Layout>
+}
+
+export default Tournaments;
