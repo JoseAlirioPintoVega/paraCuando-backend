@@ -1,6 +1,18 @@
 const Header = () => {
   return (
-    <div className="bg-black text-white flex items-center justify-between px-4 sm:px-12 py-4 min-h-[70px] text-sm"></div>
+    <div className="header flex bg-black justify-between px-4 py-4 text-white">
+      <p>logo</p>
+      <div className="options flex justify-evenly items-center gap-4 text-xs">
+        <div className="options_1 flex gap-2">
+          <p className="text-blue-500">+</p>
+          <p className="text-blue-500">crear publicacion</p>
+        </div>
+
+        <p className="options_2">Log In</p>
+
+        <p className="options_2">Sign Up</p>
+      </div>
+    </div>
   );
 };
 
