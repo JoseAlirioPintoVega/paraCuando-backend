@@ -4,7 +4,7 @@ import { NextPageWithLayout } from '../page'
 
 export const Searches: NextPageWithLayout = () => {
   return (
-    <div>searches</div>
+    <div>Searches</div>
   )
 }
 
