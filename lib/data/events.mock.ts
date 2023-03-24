@@ -1,4 +1,6 @@
-export const eventsMock = [
+import { IEvents } from '../interfaces/events.interface';
+
+export const eventsMock: IEvents[] = [
   {
     title: 'Concierto de Lady Gaga',
     short_description:

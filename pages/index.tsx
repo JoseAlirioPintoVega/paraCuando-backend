@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Logo from '../components/assets/logo/Logo';
 import { Layout } from '../components/layout/Layout';
+import { EventSlider } from '../components/sliders/EventSlider/EventSlider';
+import { eventsMock } from '../lib/data/events.mock';
 import { useCategories } from '../lib/services/categories.services';
 
 import { NextPageWithLayout } from './page';
@@ -25,19 +27,29 @@ const Home: NextPageWithLayout = () => {
           />
           <div className="flex items-center justify-center gap-2">
             <Link href={'/category/marcas-y-tiendas'}>
-              <button>Marcas y tiendas</button>
+              <button className="bg-white rounded-3xl p-2 px-4">
+                Marcas y tiendas
+              </button>
             </Link>
             <Link href={'/category/marcas-y-tiendas'}>
-              <button>Artistas y conciertos</button>
+              <button className="bg-white rounded-3xl p-2 px-4">
+                Artistas y conciertos
+              </button>
             </Link>
             <Link href={'/category/marcas-y-tiendas'}>
-              <button>Torneos</button>
+              <button className="bg-white rounded-3xl p-2 px-4">Torneos</button>
             </Link>
           </div>
         </div>
       </div>
       {/* CONTENIDO */}
-      <div className="bg-red-300 h-[70vh]">CONTENIDO</div>
+      <div className="bg-red-300 h-[70vh]">
+        <EventSlider
+          title="los mas populares"
+          subtitle="subtituloooooo"
+          events={eventsMock}
+        />
+      </div>
     </div>
   );
 };
